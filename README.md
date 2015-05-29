@@ -84,7 +84,7 @@ The steps to do this are documented in `mrjob.conf`.
 To run the job on Amazon Elastic MapReduce (their automated Hadoop cluster offering), you need to add your AWS access key ID and AWS access key to `mrjob.conf`.
 By default, the configuration file only launches two machines, both using spot instances to be cost effective.
 
-    python tag_counter.py -r emr --conf-path mrjob.conf --no-output --output-dir out input/test-100.warc
+    python tag_counter.py -r emr --conf-path mrjob.conf --python-archive mrcc.py.tar.gz --no-output --output-dir s3://{your-bucket-name}/cc-test-1 --source s3 input/test-1.warc
 
 If you are running this for a full fledged job, you will likely want to make the master server a normal instance, as spot instances can disappear at any time.
 
