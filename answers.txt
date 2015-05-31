@@ -1,0 +1,6 @@
+Running locally with -r local took about 5 minutes.
+Running with emr took about 15 minutes including setup time.
+
+There are 2042 "address" tags. Both give the same answer.
+I also made a script to aggregate and sort the results and write them to a file for each directory.
+Both aggregated files are identical.
